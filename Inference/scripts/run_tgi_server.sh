@@ -18,7 +18,7 @@ echo "使用映像檔: $TGI_IMAGE"
 echo "服務將在 http://localhost:$HOST_PORT 上提供"
 echo "--------------------------"
 
-# 若仍需從 Hub 抓補檔，建議設定 HUGGINGFACE_HUB_TOKEN（可選）
+# 若仍需從 Hub 抓補檔，建議設定 HUGGINGFACE_HUB_TOKEN
 [ -z "${HUGGINGFACE_HUB_TOKEN:-}" ] && echo "[提示] 未設定 HUGGINGFACE_HUB_TOKEN（可選）。" >&2
 
 
