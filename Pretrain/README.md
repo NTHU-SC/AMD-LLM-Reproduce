@@ -40,6 +40,12 @@ The repository is structured to manage scripts, configurations, and results:
 
 * `configs`: Contains the DeepSpeed configuration files (.json) required to activate the four benchmarked methods ($Z2+O$, $Z3$, $Z3+O$, and $Q$).
 
-* `logs`: The designated directory for storing your experiment log files. Ensure your output capture logic directs results here.
+* `logs`: The designated directory for storing experiment log files.
 
 * `run`: The actual core Python script (pretrain_llm.py) that is executed when called by the wrapper scripts
+
+## Results
+- RQ: 1675.38 tokens/s, Peak memory usage 9.23 GB
+- Z2+R+O: 123.22 tokens/s, Peak memory usage 15.06 GB
+- Z3: 976.53 tokens/s, Peak memory usage 40.34 GB
+- Z3+R+O: 66.05 tokens/s, Peak memory usage 4.58 GB
