@@ -1,0 +1,44 @@
+{
+  "train_batch_size": 3,
+  "train_micro_batch_size_per_gpu": 1,
+  "steps_per_print": 1,
+  "gradient_accumulation_steps": 1,
+  "optimizer": {
+    "type": "AdamW",
+    "params": {
+      "lr": 1e-5,
+      "betas": [
+        0.8,
+        0.999
+      ],
+      "eps": 1e-8,
+      "weight_decay": 3e-7
+    }
+  },
+  "fp16": {
+    "enabled": true
+  },
+  "zero_optimization": {
+    "stage": 3,
+    "reduce_scatter": true,
+    "overlap_comm": true,
+    "round_robin_gradients": true,
+    "contiguous_gradients": true,
+    "reduce_bucket_size": 1e8,
+    "allgather_bucket_size": 1e8,
+    "allgather_partitions": true,
+    "stage3_prefetch_bucket_size": 50000000,
+    "stage3_param_persistence_threshold": 100000,
+    "sub_group_size": 50000000,
+    "ignore_unused_parameters": true,
+    "log_trace_cache_warnings": false
+  },
+  "activation_checkpointing": {
+    "partition_activations": true,
+    "contiguous_memory_optimization": true,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": true,
+    "profile": false
+  }
+}
