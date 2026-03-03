@@ -1,0 +1,5 @@
+Method,V100 Throughputs (token/s),V100 Peak Memory (GB),Mi210 Throughputs (token/s),Mi210 Peak Memory (GB)
+LoRA,889.53,17.345,1020.01,17.49
+LoRA + ZeRO-2,844.515,19.08,1120.19,19.22
+LoRA + ZeRO-2 + Offloading,569.165,17.31,710.715,17.44
+QLoRA,724.045,8.40,738.845,8.475
