@@ -41,6 +41,13 @@ Four strategies are benchmarked:
 
 Fine-tunes LLMs using **LoRA (PEFT)** and **DeepSpeed** on AMD GPUs.
 
+| Method                     | Throughputs (token/s) | Peak Memory (GB) |
+| -------------------------- | --------------------------- | ---------------------- |
+| LoRA                       | 1020.01                     | 17.49                  |
+| LoRA + ZeRO-2              | 1120.19                     | 19.22                  |
+| LoRA + ZeRO-2 + Offloading | 710.715                     | 17.44                  |
+| QLoRA                      | 738.845                     | 8.475                  |
+
 - `script/train.py` — Main training script using HuggingFace Transformers + TRL
 - `script/ds_*.json` — DeepSpeed configs: naive, ZeRO-2, ZeRO-2 + Offload, ZeRO-3
 - `data/result.csv` — Experiment results
