@@ -7,6 +7,25 @@ Run Llama-3 8B inference on single MI210 with vLLM and TGI(Text Generation Infer
 After removing outliers, vLLM results are presented 371 token/s ± 12.4.
 The average throughput for TGI was 216 token/s ± 8.28.
 
+## Software Libraries and Framework Versions
+
+### Inference Frameworks (Docker Images)
+
+| Framework | Docker Image | Version |
+|-----------|-------------|---------|
+| vLLM | `rocm/vllm` | `rocm6.4.1_vllm_0.10.1_20250909` |
+| TGI (Text Generation Inference) | `ghcr.io/huggingface/text-generation-inference` | `2.3.0-rocm` |
+
+### Runtime Configuration
+
+| Parameter | vLLM | TGI |
+|-----------|------|-----|
+| Max model length / total tokens | 4096 | 4096 |
+| Max input tokens | — | 3072 |
+| Precision | FP16 | FP16 |
+| Quantization | None | None |
+
+
 ## Discussion
 ### Framework Hierarchy: Similarities and Differences
 
