@@ -2,7 +2,7 @@
 
 This repository contains scripts, configurations, and experiment results for reproducing LLM (Large Language Model) workflows — **Pre-training**, **Fine-tuning**, and **Inference** — on AMD MI210 GPUs, based on the paper:
 
-> *"Dissecting the Runtime Performance of the Training, Fine-tuning, and Inference of Large Language Models"*
+> ["Dissecting the Runtime Performance of the Training, Fine-tuning, and Inference of Large Language Models"](https://arxiv.org/abs/2311.03687)
 
 ---
 
@@ -56,3 +56,13 @@ Benchmarks LLM inference throughput on a **single AMD MI210** using **vLLM** and
 
 - `scripts/` — Server/client launch scripts and benchmark scripts for both vLLM and TGI
 - `experiments_data/` — Raw result CSVs (`vLLM_results.csv`, `TGI_results.csv`)
+
+## Server Specification
+| Part | Description | Numbers |
+| :--- | :--- | :--- |
+| CPU | AMD EPYC 9654 2.4GHz | 2 |
+| GPU | AMD Instinct MI210 64GB | 3 |
+| Memory | Micron DDR5 4800 64GB | 12 |
+| Storage | Samsung PM9A3 4TB | 2 |
+| Ethernet | Intel 82599ES 10GbE SFP+ <br> Intel I350 1GbE | 2 <br> 2 |
+| OS | Proxmox Virtual Environment 8.0 | - |
